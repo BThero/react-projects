@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: sans-serif, serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #222222;
+  color: #eeeeee;
+} 
+
+section.new-birthday {
+  background-color: #dddddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.birthdays-list {
+  background-color: #eeeeee;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+}
+
+section.birthdays-list {
+  overflow: scroll;
+}
+
+section.birthdays-list h2 {
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+section.birthdays-list ul {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+footer {
+  background-color: #222222;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}

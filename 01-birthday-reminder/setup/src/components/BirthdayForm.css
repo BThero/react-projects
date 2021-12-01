@@ -1,0 +1,15 @@
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  background-color: #999999;
+}
+
+button {
+  margin: 10px;
+  min-width: 100px;
+  border: 2px solid black;
+  color: lightgreen;
+  background-color: #345678;
+  border-radius: 8px;
+}
