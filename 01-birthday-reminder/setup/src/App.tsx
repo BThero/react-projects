@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import BirthdayForm from './components/BirthdayForm'
+import { BirthdayFormType } from './components/types'
 import './App.css';
 
 function App() {
@@ -12,35 +13,11 @@ function App() {
       </header>
       <main>
         <section className="new-birthday">
-          <form>
-            <div className="input-wrapper">
-              <label htmlFor="firstname">
-                First name:
-              </label>
-              <input type="text" id="firstname" required>
-
-              </input>
-            </div>
-            <div className="input-wrapper">
-              <label htmlFor="lastname">
-                Last name:
-              </label>
-              <input type="text" id="lastname" required>
-
-              </input>
-            </div>
-            <div className="input-wrapper">
-              <label htmlFor="birthday">
-                Birthday:
-              </label>
-              <input type="date" id="birthday" required>
-
-              </input>
-            </div>
-            <button>
-              Add
-            </button>
-          </form>
+          <BirthdayForm handleClick={(state: BirthdayFormType) => {
+            console.log(state.firstname)
+            console.log(state.lastname)
+            console.log(state.date.toString())
+          }}/>  
         </section>
         <section>
           <p>List of all birthdays:</p>
