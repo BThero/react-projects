@@ -1,0 +1,69 @@
+.tour-wrapper {
+  width: 620px;
+  /* padding: 2em; */
+  line-height: 1.5;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.tour-wrapper .heading-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.tour-wrapper .price {
+  color: #49a6e9;
+  background-color: #ebf7ff;
+  padding-left: 0.5em;
+  padding-right: 0.25em;
+  letter-spacing: 0.125em;
+  font-weight: 700;
+}
+
+.tour-wrapper img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tour-wrapper .content-wrapper {
+  padding: 1.5rem;
+}
+
+.tour-wrapper .description {
+  color: rgb(103, 124, 150);
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  margin-bottom: 1em;
+}
+
+.tour-wrapper button.delete {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  border: 1px solid #bb2525;  
+  border-radius: 3px;
+  color: #bb2525;
+  padding: 0.25em 3em 0.25em 3em;
+  transform: scale(1.0);
+  transition-duration: 0.25s;
+}
+
+.tour-wrapper button.delete:hover {
+  transform: scale(1.2);
+  transition-duration: 0.25s;
+}
+
+.tour-wrapper button.expand {
+  background-color: transparent;
+  border: 0;
+  margin-left: 1em;
+  color: #49a6e9;
+  text-transform: capitalize;
+}
