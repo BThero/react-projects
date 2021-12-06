@@ -1,0 +1,120 @@
+.review-wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80vw;
+  max-width: 620px;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.image-container {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  margin-bottom: 2em;
+}
+
+.review-wrapper .image-container:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -0.25em;
+  right: -0.5em;
+  background-color: rgb(73, 166, 233);
+  border-radius: 50%;
+}
+
+.review-wrapper .name {
+  color: rgb(16, 42, 66);
+  font-size: 1rem;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+.review-wrapper .activity {
+  color: rgb(73, 166, 233);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
+.review-wrapper .review {
+  color: rgb(97, 125, 152);
+  margin-bottom: 1em;
+}
+
+.review-wrapper button.prev {
+  margin-right: 2em;
+}
+
+.review-wrapper .button-wrapper {
+  margin-bottom: 1em;
+}
+
+.review-wrapper img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.review-wrapper button {
+  border: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.review-wrapper button.random {
+  background-color: rgb(230, 245, 255);
+  color: #49a6e9;
+  border: 0;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  transform: scale(1.0);
+  transition-duration: 0.5s;
+}
+
+.review-wrapper button.random:hover {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  background-color:rgb(16, 42, 66);
+  color: rgb(97, 125, 152);
+}
+
+.review-wrapper button.expand {
+  margin-left: 1em;
+  color:rgb(73, 166, 233);
+}
+
+.review-wrapper .button-wrapper button {
+  color: #8bcbf9;
+  transition-duration: 0.5s;
+}
+
+.review-wrapper .button-wrapper button:hover {
+  cursor: pointer;
+  color: #102a42;
+  transition-duration: 0.5s;
+}
+
+.top-left-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(25%);
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #49a6e9;
+  border-radius: 50%;
+  color: white;
+}
