@@ -1,8 +1,9 @@
-import React, { SyntheticEvent, useState } from 'react';
+import { SyntheticEvent } from 'react';
 import styled from 'styled-components';
 import Dish from './components/Dish'
 import { DishProps } from './components/types'
 import { getDishes } from './data';
+import { useSearchParams } from 'react-router-dom';
 
 const Title = styled.h1`
   color: #102a42;
@@ -71,13 +72,13 @@ const StyledApp = styled.div`
 `
 
 export default function App() {
-  const [filter, setFilter] = useState<String>("all")
+  const [searchParams, setSearchParams] = useSearchParams()
   let list : DishProps[] = getDishes()
 
   function handleClick(event : SyntheticEvent) {
     event.preventDefault()
     let element = event.target as HTMLElement
-    setFilter((element.textContent as string).toLowerCase())
+    setSearchParams({filter: (element.textContent as string).toLowerCase()})
   }
 
   return (
@@ -104,14 +105,14 @@ export default function App() {
 
       <StyledMain>
         {
-          list.map((item, idx) => {
-            if (filter === "all" || item.category.toLowerCase() === filter) {
+          list
+            .filter(item => {
+              let filter = searchParams.get("filter")
+              return (!filter || filter === "all" || item.category.toLowerCase() === filter) 
+            })
+            .map(item => {
               return <Dish {...item} />
-            }
-            else {
-              return null
-            }
-          })
+            })
         }
       </StyledMain>
     </StyledApp>
