@@ -6,7 +6,7 @@ export const H3 = styled.h3`
   letter-spacing: 0.1rem;
   font-weight: 400;
   margin-bottom: 0.75rem;
-`
+`;
 
 export const H4 = styled.h4`
   background-color: var(--color-gray-9);
@@ -17,4 +17,5 @@ export const H4 = styled.h4`
   margin-bottom: 0.75rem;
   letter-spacing: 0.1rem;
   font-weight: bold;
-`
+  text-transform: uppercase;
+`;

@@ -36,7 +36,7 @@ export const Nav = styled.nav`
   margin-right: 5rem;
 `;
 
-export const Main = styled.main`
+export const Wrapper = styled.main`
   display: flex;
   flex-direction: row;
   padding: 20px;

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { getPerson } from "../data";
 import { H3, H4 } from "./../Person/Person.styled";
-import Experience from "./Experience";
+import Experience from "./Experience/Experience";
 
 function Person(): JSX.Element {
   let params = useParams();
@@ -13,6 +13,7 @@ function Person(): JSX.Element {
       <H4>{person.name}</H4>
       <p>{person.span}</p>
       <Experience list={person.experience}></Experience>
+      <button>More Info</button>
     </main>
   );
 }
