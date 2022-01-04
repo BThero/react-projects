@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { GlobalStyled } from "./styles/GlobalStyled";
+import Colors from "./components/Colors/Colors";
+import Header from "./components/Header/Header";
+import { isValidHex } from "./common/utils";
+import { Div } from "./App.styled";
 
 function App() {
+  const [color, setColor] = useState<string>("#f15025");
+  const [alert, setAlert] = useState<boolean>(false);
+
+  function handleSubmit(c: string) {
+    if (isValidHex(c)) {
+      setColor(c.toLowerCase());
+      setAlert(false);
+    } else {
+      setAlert(true);
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyled />
+      <Div>
+        <Header handleSubmit={handleSubmit} alert={alert} />
+        <Colors color={color} />
+      </Div>
+    </>
   );
 }
 
