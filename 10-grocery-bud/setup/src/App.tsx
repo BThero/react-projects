@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
+import { GlobalStyled } from "./styles/GlobalStyled";
+import { Div, Header, H1 } from "./App.styled";
+import Bud from "./components/Bud";
 
 function App(): JSX.Element {
-  return <div>Hello buddy</div>;
+  return (
+    <>
+      <GlobalStyled />
+      <Div>
+        <Header>
+          <H1>Grocery Bud</H1>
+        </Header>
+        <Bud />
+      </Div>
+    </>
+  );
 }
 
 export default App;
