@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
-export const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-`;
-
-export const Form = styled.form`
+export const HTMLForm = styled.form`
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -32,17 +26,14 @@ export const Button = styled.button`
   cursor: pointer;
   line-height: 1.5;
   transition: var(--transition);
-  margin-top: 2rem;
-  background-color: transparent;
-  color: var(--clr-red-light);
-  text-align: center;
-  align-self: center;
+  padding: 0.25rem;
+  flex: 0 0 5rem;
+  background-color: var(--clr-primary-8);
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
 
   &:hover {
-    color: var(--clr-red-dark);
+    background-color: var(--clr-primary-5);
+    color: white;
   }
-`;
-
-export const UL = styled.ul`
-  margin-top: 1rem;
 `;

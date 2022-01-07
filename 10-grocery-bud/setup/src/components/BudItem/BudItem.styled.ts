@@ -5,6 +5,12 @@ export const Div = styled.div`
   display: flex;
   padding: 0.5rem 1rem;
   justify-content: space-between;
+  border-radius: var(--radius);
+  transition: var(--transition);
+
+  &:hover {
+    background-color: var(--clr-grey-10);
+  }
 `;
 
 export const P = styled.p`
