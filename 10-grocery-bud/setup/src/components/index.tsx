@@ -1,2 +1,3 @@
+import GlobalProvider from "./GlobalProvider";
 import Bud from "./Bud";
-export default Bud;
+export { GlobalProvider, Bud };
